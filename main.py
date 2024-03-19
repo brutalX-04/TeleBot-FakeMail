@@ -85,7 +85,7 @@ async def getOtp(update, context, mail):
 
 # --> Bot Send User Status
 def sendStatus(text):
-	key = '6497743974:AAEY50YlIKe7CgAJTf2RGiz6PCJI_LMS2Lc'
+	key = 'bot-token'
 	requests.get('https://api.telegram.org/bot%s/sendMessage?chat_id=6628876249&text=%s'%(key,text))
 
 
@@ -136,7 +136,7 @@ if __name__ == '__main__':
 		os.listdir('DATA')
 	except:
 		os.system('mkdir DATA')
-	application = ApplicationBuilder().token('6873953841:AAFAnQnfLceCVRTODN84Md_S8DqUDAiddzg').build()
+	application = ApplicationBuilder().token('token-bot').build()
 
 
 	application.add_handler(CallbackQueryHandler(button_click))
